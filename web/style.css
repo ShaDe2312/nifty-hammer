@@ -6,9 +6,9 @@
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
     opacity: 0%;
-    animation: dropdown 1s ;
+    animation: dropdown 1s;
     animation-timing-function: ease-in;
 }
 
@@ -49,15 +49,15 @@
 
 @keyframes dropdown {
     from{
-        transform: rotate(-45deg);
-        transform:translate(0%);
+        transform:rotate(-45deg);
         opacity: 0%;
     }
     25%{
+        transform: rotate(-45deg);
         opacity: 100%;
     }
     to{
-        transform: translate( 0vh ,45vh);
+        transform: translate( 0vh ,45vh) rotate(-45deg);
         opacity: 100%;
     }
 }
