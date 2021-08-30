@@ -1,0 +1,5 @@
+1) Change backend to work for today's date
+2) Work on UI
+
+Assignments:
+1) Do course cards using flexbox and media queries
