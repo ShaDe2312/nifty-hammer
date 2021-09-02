@@ -37,6 +37,18 @@
     text-align: center;
 }
 
+.continue{
+    top:20px;
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 90px;
+    color:white;
+    border-radius: 20%;
+    background-color:darkorchid;
+
+}
+
 @keyframes fadein {
     from{
         opacity: 0%;
