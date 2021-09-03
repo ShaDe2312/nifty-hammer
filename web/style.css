@@ -1,12 +1,12 @@
-.waterdrop{
+
+#waterdrop{
     margin: auto; 
     height: 30px;
     width: 30px;
-    background-color: #0066b2;
+    background-color: #ff8769;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
-    /* transform: rotate(-45deg); */
     opacity: 0%;
     animation: dropdown 1s;
     animation-timing-function: ease-in;
@@ -18,7 +18,7 @@
     animation-fill-mode: forwards;
 }
 
-.appname{
+#appname{
     color:white;
     font-family: sans-serif;
     opacity: 0;
@@ -28,26 +28,64 @@
     text-align: center;
 }
 
-.description{
+#description{
     color:white;
     font-family: sans-serif;
     opacity: 0;
     animation: fadein 2s forwards;
-    animation-delay: 5s;   
+    animation-delay: 4s;   
     text-align: center;
 }
-
-.continue{
-    top:20px;
-    display: block;
-    margin: auto;
-    height: 40px;
-    width: 90px;
+/* Simple container to center align the button */
+#btncontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    animation: bgcol 2s 1s forwards;
+}
+/* Button, invisible until rest of the animations are done */
+#continue{
     color:white;
-    border-radius: 20%;
-    background-color:darkorchid;
+    border: none;
+    background-color:transparent;
+    font-size: 0;
+    animation: btnappear 1s  5s  forwards;
+}
+
+#continue:hover{
+    transition-duration: 1s;
+    transform: translate(-1px,-1px);
 
 }
+
+#continue:active{
+    transform: translate(2px,2px);
+
+}
+
+@keyframes btnappear {
+    from{
+        color:white;
+        border: none;
+        background-color:transparent;
+        font-size: 0;
+    }
+
+    to{
+        height:fit-content;
+        width: fit-content;
+        box-shadow: 5px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px grey;
+        font-size: 15px;
+        color: #ff8769;
+        font-weight: bold;
+    }
+}
+
+
 
 @keyframes fadein {
     from{
@@ -73,12 +111,16 @@
         opacity: 100%;
     }
 }
-
+/* 
+html {
+    height: 100%;
+} */
+  
 @keyframes bgcol{
     from{
         background-color:white ;
     }
     to{
-        background-color: #0066b2;
+        background-color: #ff8769;
     }
 }

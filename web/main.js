@@ -10,4 +10,18 @@ doSomething();
 function logger(n){
     console.log("Got this from python:\t",n);
 }
-eel.hammerList()(logger) //try adding ()
+eel.hammerList()(logger) 
+
+
+function clearPage(){
+   var wd= document.getElementById("waterdrop");
+   var an= document.getElementById("appname");
+   var desc= document.getElementById("description");
+   var cont= document.getElementById("continue");
+
+   wd.remove();
+   an.remove();
+   desc.remove();
+   cont.remove();
+}
+

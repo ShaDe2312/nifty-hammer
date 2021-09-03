@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .waterdrop{
+    margin: auto; 
+    height: 30px;
+    width: 30px;
+    background-color: #ff8769;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    opacity: 0%;
+    animation: dropdown 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes dropdown {
+    from{
+        transform:rotate(-45deg);
+        opacity: 0%;
+    }
+    25%{
+        transform: rotate(-45deg);
+        opacity: 100%;
+    }
+    to{
+        transform: translate( 0vh ,45vh) rotate(-45deg);
+        opacity: 100%;
+    }
+}
+
+*{
+    animation: bgcol 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgcol{
+    from{
+        background-color:white ;
+    }
+    to{
+        background-image: linear-gradient( 45deg,#e66465, #9198e5);
+    }
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="waterdrop"></div>
+
+    
+</body>
+</html>
