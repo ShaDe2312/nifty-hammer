@@ -60,7 +60,14 @@
 
 #continue:active{
     transform: translate(2px,2px);
+}
 
+#loading{
+    color:black;
+    font-style: oblique 25deg ;  
+    animation: blink 2s infinite; 
+    animation-timing-function: linear;
+    animation-direction: alternate;
 }
 
 @keyframes btnappear {
@@ -85,7 +92,19 @@
     }
 }
 
+@keyframes blink {
+    from{
+        color:black;
+        font-style: oblique 25deg ; 
+        opacity: 100;
+    }
 
+    to{
+        color:white;
+        font-style: oblique 25deg ; 
+        opacity: 0;
+    }
+}
 
 @keyframes fadein {
     from{

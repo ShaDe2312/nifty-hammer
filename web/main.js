@@ -1,4 +1,4 @@
-//This is for lightning fast replies only.
+//This is for fast replies only.
 async function doSomething(){
 let result = await eel.abcd()();
 console.log((result));
@@ -9,6 +9,18 @@ doSomething();
 //Async communication
 function logger(n){
     console.log("Got this from python:\t",n);
+    for (let i = 0; i < n.length; i++) {
+        // const element = n[i];
+        const element = document.createElement("p");
+        element.innerText= "(" + n[i][1] + ") " + n[i][0];
+        element.className = "stockList"
+        //element.href="https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript";
+        document.body.append(element);
+    }
+
+    const load = document.getElementById("loading");
+    load.remove();
+
 }
 eel.hammerList()(logger) 
 
@@ -23,5 +35,15 @@ function clearPage(){
    an.remove();
    desc.remove();
    cont.remove();
+
+//    showElems();
+    createLoading();
+}
+
+function createLoading(){
+    var loading = document.createElement("h3");
+    loading.id = "loading";
+    loading.innerText="Loading...";
+    document.body.appendChild(loading);
 }
 

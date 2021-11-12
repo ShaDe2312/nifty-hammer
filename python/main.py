@@ -4,7 +4,7 @@ import pandas as pd
 import eel
 
 eel.init('C:/Users/rugve/stock-project/web')
-#eel.start('C:/Users/rugve/stock-project/web/main.html' , mode='chrome')
+
 
 @eel.expose
 def abcd(): #Function only for testing
@@ -17,7 +17,7 @@ def hammerList():
     stockList = ["ULTRACEMCO","HINDALCO","SBILIFE","LT","DRREDDY","SUNPHARMA","BAJAJFINSV","GRASIM","DIVISLAB","COALINDIA","TCS","SHREECEM","CIPLA","UPL","BPCL","KOTAKBANK","ONGC","HEROMOTOCO","JSWSTEEL","AXISBANK","WIPRO","ITC","POWERGRID","ADANIPORTS","HDFC","TATASTEEL","HDFCLIFE","TATAMOTORS","NTPC","HINDUNILVR","MARUTI","BHARTIARTL","TITAN","BAJFINANCE","BAJAJ-AUTO","SBIN","BRITANNIA","ICICIBANK","IOC","ASIANPAINT","RELIANCE","EICHERMOT","HDFCBANK","NESTLEIND","HCLTECH","TECHM","M&M","TATACONSUM","INDUSINDBK","INFY"]
 
     for stock in stockList:
-        temp = get_history(symbol=stock,start=date(2021,8,20), end= date(2021,8,21)) #Format: yyyy,mm,dd
+        temp = get_history(symbol=stock,start=date(2021,11,12), end= date(2021,11,12)) #Format: yyyy,mm,dd
         frames.append(temp)
 
     stocksDf=pd.concat(frames)
@@ -86,17 +86,15 @@ def hammerList():
             else:
                 return False;       
 
-
     answerList=[]
     for i in range(len(stocksDf)):
         if isInvertedHammer(stocksDf.iloc[i]):
-            answerList.append(str(stocksDf.iloc[i][0]) + " is an inverted hammer")
+            answerList.append([str(stocksDf.iloc[i][0]) , "Inv Hammer"])
                 
         if isHammer(stocksDf.iloc[i]):
-            answerList.append(str(stocksDf.iloc[i][0]) + " is a hammer")
+            answerList.append([str(stocksDf.iloc[i][0]) , "Hammer"])
 
     print(answerList)
     return answerList;
 
-#hammerList();
 eel.start('C:/Users/rugve/stock-project/web/main.html' , mode='chrome' , size = (400,370))
