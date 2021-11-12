@@ -70,6 +70,17 @@
     animation-direction: alternate;
 }
 
+.stockList{
+    display: block;
+    margin:15px;
+    padding:10px;
+}
+
+.stockList:hover{
+    transition-duration: 500ms;
+    color:aquamarine;
+}
+
 @keyframes btnappear {
     from{
         color:white;

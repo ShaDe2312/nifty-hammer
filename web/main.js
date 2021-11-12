@@ -11,13 +11,12 @@ function logger(n){
     console.log("Got this from python:\t",n);
     for (let i = 0; i < n.length; i++) {
         // const element = n[i];
-        const element = document.createElement("p");
+        const element = document.createElement("a");
         element.innerText= "(" + n[i][1] + ") " + n[i][0];
         element.className = "stockList"
-        //element.href="https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript";
+        element.href="https://in.tradingview.com/chart/?symbol=NSE%3A" + n[i][0];
         document.body.append(element);
     }
-
     const load = document.getElementById("loading");
     load.remove();
 
