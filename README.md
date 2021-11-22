@@ -1,6 +1,6 @@
 # Nifty Hammer! 🔨
 
-[Hammers](https://www.investopedia.com/terms/h/hammer.asp) and [Inverted Hammers](https://en.wikipedia.org/wiki/Inverted_hammer) are powerful predictors of the direction in which a stock is moving, and can help tell you if it is time to buy a stock . This is a small GUI based project, which tells you about the stocks in the [Nifty fifty index](https://en.wikipedia.org/wiki/NIFTY_50) which have recently been Hammers or Inverted Hammers on a daily timeframe.
+[Hammers](https://www.investopedia.com/terms/h/hammer.asp) and [Inverted Hammers](https://en.wikipedia.org/wiki/Inverted_hammer) are powerful predictors of the direction in which a stock is moving, and can help tell you if it is time to buy a stock . This is a GUI based project, which tells you about the stocks in the [Nifty fifty index](https://en.wikipedia.org/wiki/NIFTY_50) which have recently been Hammers or Inverted Hammers on a daily timeframe.
 
 Made using HTML,CSS & JS for Front end and Python at the Backend, using a handy library called [Eel](https://github.com/ChrisKnott/Eel).
 
