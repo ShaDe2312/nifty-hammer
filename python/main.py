@@ -2,9 +2,20 @@ from datetime import date
 from nsepy import get_history
 import pandas as pd
 import eel
+from datetime import date
+from datetime import timedelta
 
 eel.init('C:/Users/rugve/stock-project/web')
 
+lastTradingDay = date.today()
+
+if(lastTradingDay.weekday==5):
+    lastTradingDay= lastTradingDay - timedelta(days=1);
+
+elif(lastTradingDay.weekday==6):
+    lastTradingDay= lastTradingDay - timedelta(days=2);
+
+print("Last trading day:", lastTradingDay)
 
 @eel.expose
 def abcd(): #Function only for testing
@@ -17,7 +28,9 @@ def hammerList():
     stockList = ["ULTRACEMCO","HINDALCO","SBILIFE","LT","DRREDDY","SUNPHARMA","BAJAJFINSV","GRASIM","DIVISLAB","COALINDIA","TCS","SHREECEM","CIPLA","UPL","BPCL","KOTAKBANK","ONGC","HEROMOTOCO","JSWSTEEL","AXISBANK","WIPRO","ITC","POWERGRID","ADANIPORTS","HDFC","TATASTEEL","HDFCLIFE","TATAMOTORS","NTPC","HINDUNILVR","MARUTI","BHARTIARTL","TITAN","BAJFINANCE","BAJAJ-AUTO","SBIN","BRITANNIA","ICICIBANK","IOC","ASIANPAINT","RELIANCE","EICHERMOT","HDFCBANK","NESTLEIND","HCLTECH","TECHM","M&M","TATACONSUM","INDUSINDBK","INFY"]
 
     for stock in stockList:
-        temp = get_history(symbol=stock,start=date(2021,11,12), end= date(2021,11,12)) #Format: yyyy,mm,dd
+        #temp = get_history(symbol=stock,start=lastTradingDay, end= lastTradingDay)
+        temp = get_history(symbol=stock,start= date(2021,11,12), end= date(2021,11,12)) #Format: yyyy,mm,dd
+
         frames.append(temp)
 
     stocksDf=pd.concat(frames)
