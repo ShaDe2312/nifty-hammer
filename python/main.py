@@ -8,11 +8,11 @@ from datetime import timedelta
 eel.init('C:/Users/rugve/stock-project/web')
 
 lastTradingDay = date.today()
-
-if(lastTradingDay.weekday==5):
+print("Today is: ", lastTradingDay.weekday())
+if(lastTradingDay.weekday()==5):
     lastTradingDay= lastTradingDay - timedelta(days=1);
 
-elif(lastTradingDay.weekday==6):
+elif(lastTradingDay.weekday()==6):
     lastTradingDay= lastTradingDay - timedelta(days=2);
 
 print("Last trading day:", lastTradingDay)
@@ -29,7 +29,7 @@ def hammerList():
 
     for stock in stockList:
         #temp = get_history(symbol=stock,start=lastTradingDay, end= lastTradingDay)
-        temp = get_history(symbol=stock,start= date(2021,11,12), end= date(2021,11,12)) #Format: yyyy,mm,dd
+        temp = get_history(symbol=stock,start= date(2022,1,20), end= date(2022,1,20)) #Format: yyyy,mm,dd
 
         frames.append(temp)
 

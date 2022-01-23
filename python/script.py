@@ -16,13 +16,12 @@ elif(lastTradingDay.weekday==6):
 
 print("Last trading day:", lastTradingDay)
 
-
 frames=[]
 stockList = ["ULTRACEMCO","HINDALCO","SBILIFE","LT","DRREDDY","SUNPHARMA","BAJAJFINSV","GRASIM","DIVISLAB","COALINDIA","TCS","SHREECEM","CIPLA","UPL","BPCL","KOTAKBANK","ONGC","HEROMOTOCO","JSWSTEEL","AXISBANK","WIPRO","ITC","POWERGRID","ADANIPORTS","HDFC","TATASTEEL","HDFCLIFE","TATAMOTORS","NTPC","HINDUNILVR","MARUTI","BHARTIARTL","TITAN","BAJFINANCE","BAJAJ-AUTO","SBIN","BRITANNIA","ICICIBANK","IOC","ASIANPAINT","RELIANCE","EICHERMOT","HDFCBANK","NESTLEIND","HCLTECH","TECHM","M&M","TATACONSUM","INDUSINDBK","INFY"]
 
 for stock in stockList:
-    #temp = get_history(symbol=stock,start=lastTradingDay, end= lastTradingDay)
-    temp = get_history(symbol=stock,start= date(2021,12,14), end= date(2021,12,14)) #Format: yyyy,mm,dd
+    temp = get_history(symbol=stock,start=lastTradingDay, end= lastTradingDay)
+    #temp = get_history(symbol=stock,start= date(2021,12,14), end= date(2021,12,14)) #Format: yyyy,mm,dd
 
     frames.append(temp)
 
@@ -84,4 +83,4 @@ print(answerList)
 
 if(len(answerList)>0):
     notif= ToastNotifier();
-    notif.show_toast("Nifty Hammer", f"We found {len(answerList)} stocks for you today" , icon_path= "C:/Users/rugve/stock-project/web/scriptIcon.ico", duration=5)
+    notif.show_toast("Nifty Hammer", f"We found {len(answerList)} stocks for you today" , icon_path= "C:/Users/rugve/stock-project/web/scriptIcon.ico", duration=15)

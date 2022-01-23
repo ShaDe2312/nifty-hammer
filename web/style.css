@@ -3,7 +3,7 @@
     margin: auto; 
     height: 30px;
     width: 30px;
-    background-color: #ff8769;
+    background-color: #548CFF;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
@@ -19,7 +19,7 @@
 }
 
 #appname{
-    color:white;
+    color:#CFFFDC;
     font-family: sans-serif;
     opacity: 0;
     animation: fadein 1s forwards;
@@ -29,7 +29,7 @@
 }
 
 #description{
-    color:white;
+    color:#CFFFDC;
     font-family: sans-serif;
     opacity: 0;
     animation: fadein 2s forwards;
@@ -45,7 +45,7 @@
 }
 /* Button, invisible until rest of the animations are done */
 #continue{
-    color:white;
+    color:#CFFFDC;
     border: none;
     background-color:transparent;
     font-size: 0;
@@ -86,7 +86,7 @@
 
 @keyframes btnappear {
     from{
-        color:white;
+        color:#CFFFDC;
         border: none;
         background-color:transparent;
         font-size: 0;
@@ -96,12 +96,12 @@
         height:fit-content;
         width: fit-content;
         box-shadow: 5px;
-        background-color: white;
+        background-color: #CFFFDC;
         border: 1px solid black;
         border-radius: 5px;
         box-shadow: 2px 2px 2px grey;
         font-size: 15px;
-        color: #ff8769;
+        color: #548CFF;
         font-weight: bold;
     }
 }
@@ -114,7 +114,7 @@
     }
 
     to{
-        color:white;
+        color:#CFFFDC;
         font-style: oblique 25deg ; 
         opacity: 0;
     }
@@ -154,6 +154,6 @@ html {
         background-color:white ;
     }
     to{
-        background-color: #ff8769;
+        background-color: #548CFF;
     }
 }
